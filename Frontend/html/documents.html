@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>ReR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" type="image/png" href="../Icons/favicon.ico">
+
+</head>
+
+<body class="toggle-scroll body">
+    <header>
+        <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%" onclick="location.reload()">YouRSS</text>
+            </symbol>
+        
+            <g class = "g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+
+        <nav class="nav-bar toggle-nav" id="nav">
+            <ul class="nav-objs">
+                <li><a href="news.html" onclick="location.reload()">News</a></li>
+                <li><a href="images.html" onclick="location.reload()" >Images</a></li>
+                <li><a href="videos.html" onclick="location.reload()">Videos</a></li>
+                <li><a href="documents.html" onclick="location.reload()">Documents</a></li>
+                <li><a href="account.html" onclick="location.reload()">Account</a></li>
+            </ul>
+        </nav>
+        <button id="sign-up">Sign Up</button>
+        
+        <div class="search-container toggle-search" id="search">
+            <input type="text" placeholder="Search.." id="search-input">
+            <div class="search"></div>
+        </div>
+            <img src="../Icons/menu.png" alt="toggle menu" class="menu toggle-menu" id="menu">
+            <script>
+                /*afisam/ascundem meniul hamburger*/
+                var menu = document.getElementById("menu");
+                var nav = document.getElementById("nav");
+                var search = document.getElementById("search");
+                menu.addEventListener('click', function(e) {
+                    nav.classList.toggle('toggle-mobile');
+                    search.classList.toggle('toggle-search');
+                    e.preventDefault();
+                });
+            </script>
+
+
+        
+    </header>
+
+    <h1>Loading Documents* Work in progress*</h1>
+    <form action="https://www.patreon.com/youRSS">
+        <button type="submit" class="donate">DonatePls</button>
+    </form>
+
+    <div class="body-content" id="main-body">
+       
+        
+
+    </div>
+
+
+    
+    <footer>
+        <div class="footer-content">
+
+            <div class="left box">
+                <h2> About us</h2>
+                <div class="content">
+                    <p>Tehnologii Web, 2020 </p>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/ciubiiii"><span class="fab fa-facebook-f"></span></a>
+                        <a href="https://twitter.com/lila_marian"><span class="fab fa-twitter"></span></a>
+                        <a href="https://www.instagram.com/marinicul/"><span class="fab fa-instagram"></span></a>
+                        <a href="https://youtu.be/nX2M7nzXWqA?t=83"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="right box">
+                <h2> Contact details</h2>
+                <div class="content">
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+40-766871760</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">youRSS420@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="bg-modal togle-pop" id="sing-pop-up">
+        <div class="pop-content">
+            
+            <img src="../Icons/x-circle.png" alt="close" class="pop-exit" id="pop-exit">
+
+            <label class="pop-logo">Join Us</label>
+            
+            <button class="check-pop">Sign Up</button>
+            
+            
+            <form action="#" class="pop-input">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Surname">
+                <input type="number" placeholder="Phone Number">
+                <input type="email" placeholder="E-Mail">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Pass">
+                
+            </form>
+        </div>
+        <script>
+            // afisam/ascundem pop-up sign up
+            var btn =document.getElementById("sign-up");
+            var pop =document.getElementById("sing-pop-up");
+            var exit =document.getElementById("pop-exit");
+            var body= document.getElementById('main-body');
+            btn.addEventListener('click', function(e){
+                pop.classList.toggle('toggle-pop');
+                body.classList.toggle('toggle-scroll');
+                e.preventDefault();
+            });
+            pop-exit.addEventListener('click',function(e){
+                pop.classList.toggle('toggle-pop');
+                body.classList.toggle('toggle-scroll');
+                e.preventDefault();
+            });
+            
+        </script>
+    </div>
+
+    <script src="../javascript/scriptImgFeed.js" type="module"></script>
+
+</body>
+
+
+
+</html>
