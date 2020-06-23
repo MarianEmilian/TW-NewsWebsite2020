@@ -1077,7 +1077,7 @@ footer {
 .body-content-account .body-right .preferences .titlu-right {
   padding-bottom: 3px;
   border-bottom: 1px solid #e0e0e0;
-  color: #06080c;
+  color: white;
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: 125%;
@@ -1098,12 +1098,13 @@ footer {
 .body-content-account .body-right .info-data .data .subtitle-right {
   margin-bottom: 5px;
   font-size: 120%;
+  color: white;
 }
 
 .body-content-account .body-right .info-data .data p {
   font-style: italic;
   font-size: 115%;
-  color: rgb(160, 160, 160);
+  color: rgb(255, 255, 255);
   padding-bottom: 5px;
 }
 
