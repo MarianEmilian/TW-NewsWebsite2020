@@ -41,9 +41,7 @@ body {
     width: 630px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.657), 0 6px 6px rgba(0, 0, 0, 0.623);
 }
-.label-search{
-    z-index: 3;
-}
+
 header {
     display: flex;
     align-items: center;
@@ -1207,4 +1205,10 @@ svg {
 
 .social a{
     color: white;
+}
+
+
+.label-search{
+    position:absolute;
+    left: -10000px;
 }
