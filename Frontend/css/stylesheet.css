@@ -397,7 +397,7 @@ nav ul li a:hover {
         border-radius: 30px;
         border: 10px solid #081C24;
         margin: 10px;
-        width: 200px;
+        width: 80%;
         height: 300px;
         animation: appear 3s;
     }
