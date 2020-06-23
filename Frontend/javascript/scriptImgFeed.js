@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }).then(function(data){
         console.log(data);        
             var img=new Image();
-
+            
             img.setAttribute("id","random-image");
             img.setAttribute("src", data.urls.regular);
             img.setAttribute("height","80%");

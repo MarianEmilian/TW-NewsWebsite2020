@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <title>ReR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The account settings page for YouRSS website.">
     <link rel="stylesheet" href="../css/stylesheet.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="icon" type="image/png" href="../Icons/favicon.ico">
 
 </head>
@@ -143,40 +143,52 @@
                                     <script>
                                         function showpw() {
                                             var pw = document.getElementById("showpw");
-                                            if (pw.type == "text")
+                                            if (pw.type == "text"){
                                                 pw.type = "password";
-                                            else
+                                                pw.innerHTML='Show';
+                                            }
+                                            else{
                                                 pw.type = "text";
+                                                pw.innerHTML='Hide';
+                                              }  
                                         }
                                     </script>
 
                                     <script>
                                         function showpwnew() {
                                             var pw = document.getElementById("showpwnew");
-                                            if (pw.type == "text")
+                                            if (pw.type == "text"){
                                                 pw.type = "password";
-                                            else
+                                                pw.innerHTML='Show';
+                                            }
+                                            else{
                                                 pw.type = "text";
+                                                pw.innerHTML='Hide';
+                                              }  
                                         }
                                     </script>
 
                                     <script>
                                         function showpwconf() {
                                             var pw = document.getElementById("showpwconf");
-                                            if (pw.type == "text")
+                                            if (pw.type == "text"){
                                                 pw.type = "password";
-                                            else
+                                                pw.innerHTML='Show';
+                                            }
+                                            else{
                                                 pw.type = "text";
-                                        }
+                                                pw.innerHTML='Hide';
+                                              }  
+                                    }
                                     </script>
                                     <div class="modal__body__right">
                                         <p>SECURITY INFO</p>
-                                        <label>Old Password:</label><br>
-                                        <input type="password" id="showpw"><button onclick="showpw();" class="button-showpw"><i class="far fa-eye"></i></button><br>
-                                        <label>New Password:</label><br>
-                                        <input type="password" id="showpwnew"><button onclick="showpwnew();" class="button-showpw"><i class="far fa-eye"></i></button><br>
-                                        <label>Confirm New Password:</label><br>
-                                        <input type="password" id="showpwconf"><button onclick="showpwconf();" class="button-showpw"><i class="far fa-eye"></i></button><br>
+                                        <label for="showpw">Old Password:</label><br>
+                                        <input type="password" id="showpw"><button onclick="showpw();" class="button-showpw">Show</button><br>
+                                        <label for="showpwnew">New Password:</label><br>
+                                        <input type="password" id="showpwnew"><button onclick="showpwnew();" class="button-showpw">Show</button><br>
+                                        <label for="showpwconf">Confirm New Password:</label><br>
+                                        <input type="password" id="showpwconf"><button onclick="showpwconf();" class="button-showpw">Show</button><br>
                                     </div>
                                 </div>
 
@@ -236,7 +248,6 @@
             </div>
         </div>
 
-        <a href="https://www.patreon.com/youRSS" class="donate"></a>
         <form action="https://www.patreon.com/youRSS">
 
             <button type="submit" class="donate">DonatePls</button>
@@ -253,10 +264,7 @@
                     <p>Tehnologii Web, 2020 </p>
 
                     <div class="social">
-                        <a href="https://www.facebook.com/ciubiiii"><span class="fab fa-facebook-f"></span></a>
-                        <a href="https://twitter.com/lila_marian"><span class="fab fa-twitter"></span></a>
-                        <a href="https://www.instagram.com/marinicul/"><span class="fab fa-instagram"></span></a>
-                        <a href="https://youtu.be/nX2M7nzXWqA?t=83"><span class="fab fa-youtube"></span></a>
+                        <a href="https://youtu.be/nX2M7nzXWqA?t=83">Youtube</a>
                     </div>
                 </div>
             </div>
@@ -266,11 +274,9 @@
                 <h2> Contact details</h2>
                 <div class="content">
                     <div class="phone">
-                        <span class="fas fa-phone-alt"></span>
                         <span class="text">+40-766871760</span>
                     </div>
                     <div class="email">
-                        <span class="fas fa-envelope"></span>
                         <span class="text">youRSS420@gmail.com</span>
                     </div>
                 </div>
