@@ -29,8 +29,9 @@
             removeTag(tags.length - 1);
         }
     });
+
+    newLabel.appendChild(mainInput);
     el.appendChild(newLabel);
-    el.appendChild(mainInput);
     el.appendChild(hiddenInput);
 
     addTag('netflix!');
