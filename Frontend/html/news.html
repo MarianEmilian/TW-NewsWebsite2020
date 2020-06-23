@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="toggle-scroll body">
+<body class="toggle-scroll body" id="body">
     <header>
         <svg viewBox="0 0 960 300">
             <symbol id="s-text">
@@ -123,7 +123,7 @@
             var btn =document.getElementById("sign-up");
             var pop =document.getElementById("sing-pop-up");
             var exit =document.getElementById("pop-exit");
-            var body= document.getElementById('main-body');
+            var body= document.getElementById('body');
             btn.addEventListener('click', function(e){
                 pop.classList.toggle('toggle-pop');
                 body.classList.toggle('toggle-scroll');

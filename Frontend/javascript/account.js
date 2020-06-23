@@ -1,15 +1,16 @@
 [].forEach.call(document.getElementsByClassName('tags-input-account'), function(el) {
     let hiddenInput = document.createElement('input'),
         mainInput = document.createElement('input'),
+        label=document.createElement('label'),
         tags = [];
 
     hiddenInput.setAttribute('type', 'hidden');
     hiddenInput.setAttribute('name', el.getAttribute('data-name'));
+    
+    label.setAttribute('for','main-input');
 
-    var newLabel = document.createElement("label");
-    newLabel.setAttribute('for','main-input')
     mainInput.setAttribute('type', 'text');
-    mainInput.setAttribute('id','main-input');
+    mainInput.setAttribute('id',"main-input");
     mainInput.classList.add('main-input');
     mainInput.addEventListener('input', function() {
         let enteredTags = mainInput.value.split(',');
@@ -29,9 +30,8 @@
             removeTag(tags.length - 1);
         }
     });
-
-    newLabel.appendChild(mainInput);
-    el.appendChild(newLabel);
+    el.appendChild(label);
+    el.appendChild(mainInput);
     el.appendChild(hiddenInput);
 
     addTag('netflix!');
@@ -78,3 +78,39 @@
         return tag.replace(/[^\w -]/g, '').trim().replace(/\W+/g, '-');
     }
 });
+
+function showpw() {
+    var pw = document.getElementById("showpw");
+    if (pw.type == "text"){
+        pw.type = "password";
+        pw.innerHTML='Show';
+    }
+    else{
+        pw.type = "text";
+        pw.innerHTML='Hide';
+      }  
+}
+
+function showpwnew() {
+    var pw = document.getElementById("showpwnew");
+    if (pw.type == "text"){
+        pw.type = "password";
+        pw.innerHTML='Show';
+    }
+    else{
+        pw.type = "text";
+        pw.innerHTML='Hide';
+      }  
+}
+
+function showpwconf() {
+    var pw = document.getElementById("showpwconf");
+    if (pw.type == "text"){
+        pw.type = "password";
+        pw.innerHTML='Show';
+    }
+    else{
+        pw.type = "text";
+        pw.innerHTML='Hide';
+      }  
+}

@@ -14,7 +14,7 @@
 
 
 
-<body class="toggle-scroll body">
+<body class="toggle-scroll body" id="body">
     <header>
         <svg viewBox="0 0 960 300">
             <symbol id="s-text">
@@ -43,8 +43,12 @@
         <button id="sign-up">Sign Up</button>
 
         <div class="search-container toggle-search" id="search">
-            
+            <form action="#">
+            <label>
+                <input type="text" placeholder="Search.." id="search-input">
+            </label>
             <div class="search"></div>
+            </form>
         </div>
 
         <img src="../Icons/menu.png" alt="toggle menu" class="menu toggle-menu" id="menu">
@@ -84,7 +88,7 @@
             var btn = document.getElementById("sign-up");
             var pop = document.getElementById("sing-pop-up");
             var exit = document.getElementById("pop-exit");
-            var body = document.getElementById('main-body');
+            var body = document.getElementById('body');
             btn.addEventListener('click', function(e) {
                 pop.classList.toggle('toggle-pop');
                 body.classList.toggle('toggle-scroll');
@@ -137,47 +141,6 @@
                                         <input type="number" id="phone" name="phone"><br>
                                     </div>
 
-                                    <script>
-                                        function showpw() {
-                                            var pw = document.getElementById("showpw");
-                                            if (pw.type == "text"){
-                                                pw.type = "password";
-                                                pw.innerHTML='Show';
-                                            }
-                                            else{
-                                                pw.type = "text";
-                                                pw.innerHTML='Hide';
-                                              }  
-                                        }
-                                    </script>
-
-                                    <script>
-                                        function showpwnew() {
-                                            var pw = document.getElementById("showpwnew");
-                                            if (pw.type == "text"){
-                                                pw.type = "password";
-                                                pw.innerHTML='Show';
-                                            }
-                                            else{
-                                                pw.type = "text";
-                                                pw.innerHTML='Hide';
-                                              }  
-                                        }
-                                    </script>
-
-                                    <script>
-                                        function showpwconf() {
-                                            var pw = document.getElementById("showpwconf");
-                                            if (pw.type == "text"){
-                                                pw.type = "password";
-                                                pw.innerHTML='Show';
-                                            }
-                                            else{
-                                                pw.type = "text";
-                                                pw.innerHTML='Hide';
-                                              }  
-                                    }
-                                    </script>
                                     <div class="modal__body__right">
                                         <p>SECURITY INFO</p>
                                         <label for="showpw">Old Password:</label><br>
@@ -234,7 +197,10 @@
                             Enter some tags:
                         </p>
 
-                        <div class="tags-input-account" data-name="tags-input-account"></div>
+                        <div class="tags-input-account" data-name="tags-input-account">
+                            
+
+                        </div>
 
                         <p>
                             * You have to press the comma to add more tags. *
