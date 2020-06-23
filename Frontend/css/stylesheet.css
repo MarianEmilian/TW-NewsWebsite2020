@@ -336,8 +336,8 @@ nav ul li a:hover {
         left: 10%;
     }
     .check-pop{
-        top:75%;
-        height:60px;
+        top:78%;
+        height:fit-content;
     }
     .pop-exit{
         left: 83%;
@@ -374,22 +374,22 @@ nav ul li a:hover {
         top: 40px;
         left: 15%;
         width: 70%;
-        height:500px;
+        height:600px;
     }
     .pop-input{
-        height: 380px;
+        height: 400px;
     }
 
     .check-pop{
         left:5%;
         top:93%;
         font-size: 20px;
-        height:35px;
+        height:fit-content;
     }
     .pop-logo{
         position: relative;
         top: 13.5%;
-        left:5%;
+        left:10%;
         font-size: 40px;
     }
     .body-content img{
@@ -415,6 +415,12 @@ nav ul li a:hover {
     }
     .bg-modal{
         height: 400%;
+    }
+    .pop-content{
+        top: 40px;
+        left: 15%;
+        width: 70%;
+        height:500px;
     }
 }
 
