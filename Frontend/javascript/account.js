@@ -6,7 +6,10 @@
     hiddenInput.setAttribute('type', 'hidden');
     hiddenInput.setAttribute('name', el.getAttribute('data-name'));
 
+    var newLabel = document.createElement("label");
+    newLabel.setAttribute('for',"main-input")
     mainInput.setAttribute('type', 'text');
+    mainInput.setAttribute('id',"main-input");
     mainInput.classList.add('main-input');
     mainInput.addEventListener('input', function() {
         let enteredTags = mainInput.value.split(',');
@@ -26,7 +29,7 @@
             removeTag(tags.length - 1);
         }
     });
-
+    el.appendChild(newLabel);
     el.appendChild(mainInput);
     el.appendChild(hiddenInput);
 
