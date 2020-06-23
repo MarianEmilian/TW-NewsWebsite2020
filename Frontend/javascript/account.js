@@ -8,7 +8,8 @@
     hiddenInput.setAttribute('name', el.getAttribute('data-name'));
     
     label.setAttribute('for','main-input');
-
+    label.classList.add('label-hidden');
+    label.innerHTML="Add tag";
     mainInput.setAttribute('type', 'text');
     mainInput.setAttribute('id',"main-input");
     mainInput.classList.add('main-input');
