@@ -56,14 +56,14 @@ function getImgFeed(){
                 var ratio= height/width;
                 if(ratio>1){//photo is portrait
                     height=400;
-                    width=ratio*300;
+                    width=0.75*height;
                 }
                 else{//photo is landscape
                     height=300;
                     width=1.5*height;
                 }
 
-                img.setAttribute("src",photo.urls.small);
+                img.setAttribute("src",photo.urls.thumb);
                 img.setAttribute("height",height);
                 img.setAttribute("width",width);
                 img.setAttribute("alt",photo.description);
