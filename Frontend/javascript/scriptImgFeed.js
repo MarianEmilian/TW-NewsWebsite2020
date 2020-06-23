@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 width=1080
             }
             img.setAttribute("id","random-image");
-            img.setAttribute("src", data.urls.small);
+            img.setAttribute("src", data.urls.regular);
             img.setAttribute("height",height);
             img.setAttribute("width",width);
             img.setAttribute("alt",data.description);
