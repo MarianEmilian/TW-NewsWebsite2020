@@ -505,37 +505,6 @@ nav ul li a:hover {
     top: -10px;
 }
 
-
-.left .content .social {
-    margin: 20px 0 0 0;
-}
-
-.left .content .social a {
-    padding: 0 2px;
-}
-
-.left .content .social a span {
-    height: 40px;
-    width: 40px;
-    background: #1a1a1a;
-    line-height: 40px;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.center-box .content .text {
-    font-size: 1.0625rem;
-    font-weight: 200;
-    padding-left: 10px;
-}
-
-.center-box .content .phone {
-    margin: 15px 0;
-}
-
-
 /* Search bar style */
 
 .search-container {
@@ -1000,21 +969,6 @@ footer {
   margin: 2%;
 }
 
-.left .content .social a span {
-  height: 30px;
-  width: 30px;
-  background: #081C24;
-  line-height: 30px;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: 0.3s;
-  color: white;
-}
-
-.left .content .social a span:hover {
-  background: #f12020;
-}
 
 .right .content .text {
   color: white;
