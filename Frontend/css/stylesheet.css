@@ -1046,7 +1046,9 @@ input[type=text]:focus {
 
 footer {
   width: 100%;
+  height: 170px;
   background: #081C24;
+  margin-bottom: 0px;
 }
 
 .footer-content {
