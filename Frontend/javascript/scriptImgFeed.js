@@ -48,18 +48,19 @@ function getImgFeed(){
                 var click=document.createElement('a');
                 click.href=photo.links.html;
                 click.setAttribute('target','_blank');//open in new tab
-
+                click.setAttribute('rel','noreferrer')
                 var img=new Image();
-                
                 var height=photo.height;
                 var width=photo.width;
-                if(height/width>1){//photo is portrait
+
+                var ratio= height/width;
+                if(ratio>1){//photo is portrait
                     height=400;
-                    width=300;
+                    width=0.75*height;
                 }
                 else{//photo is landscape
                     height=300;
-                    width=400;
+                    width=1.5*height;
                 }
 
                 img.setAttribute("src",photo.urls.regular);
@@ -94,11 +95,21 @@ document.addEventListener("DOMContentLoaded", function(){
     }).then(function(data){
         console.log(data);        
             var img=new Image();
-            
+            var ratio=data.height/data.width;
+            var height=0,
+            width=0;
+            if(ratio>1){
+                height=1080;
+                width=720;
+            }
+            else{
+                height=720;
+                width=1080
+            }
             img.setAttribute("id","random-image");
             img.setAttribute("src", data.urls.regular);
-            img.setAttribute("height","80%");
-            img.setAttribute("width","90%");
+            img.setAttribute("height",height);
+            img.setAttribute("width",width);
             img.setAttribute("alt",data.description);
             body.appendChild(img);
 
