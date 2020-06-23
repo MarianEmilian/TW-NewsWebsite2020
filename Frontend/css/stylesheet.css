@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Rancho:wght@300;400;500&display=swap%27');
 
+.toggle-scroll{
+    max-height: 100%;
+    overflow: visible;
+}
+
+
 body {
     background: #203239;
     /* #081C24 un albastru inchis*/
@@ -152,10 +158,6 @@ nav ul li a:hover {
 }
 .toggle-pop{
     display: block;
-}
-.toggle-scroll{
-    max-height: 100%;
-    overflow: visible;
 }
 
 
@@ -389,6 +391,15 @@ nav ul li a:hover {
         top: 13.5%;
         left:5%;
         font-size: 40px;
+    }
+    .body-content img{
+
+        border-radius: 30px;
+        border: 10px solid #081C24;
+        margin: 10px;
+        width: 200px;
+        height: 300px;
+        animation: appear 3s;
     }
 
 }
@@ -1176,4 +1187,12 @@ svg {
     100% {
         stroke-dashoffset: -35%;
     }
+}
+
+.credits h1{
+    color: white;
+}
+
+.social a{
+    color: white;
 }

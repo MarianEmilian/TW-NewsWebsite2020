@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="toggle-scroll body">
+<body class="toggle-scroll body" id="body">
     <header>
         <svg viewBox="0 0 960 300">
             <symbol id="s-text">
@@ -61,7 +61,7 @@
         
     </header>
 
-    <a href="https://unsplash.com/developers" target='_blank'><h1>Loading Images using Unsplashed Api</h1></a>
+    <a href="https://unsplash.com/developers" target='_blank' id="credits">Loading Images using Unsplashed Api</a>
 
     <div class="body-content" id="main-body">
         
@@ -113,14 +113,14 @@
             <button class="check-pop">Sign Up</button>
             
         
-                <form action="#" class="pop-input">
-                    <label><input type="text" placeholder="Name"></label>
-                    <label><input type="text" placeholder="Surname"></label>
-                    <label><input type="number" placeholder="Phone Number"></label>
-                    <label><input type="email" placeholder="E-Mail"></label>
-                    <label><input type="password" placeholder="Password"></label>
-                    <label><input type="password" placeholder="Confirm Pass">  </label>
-                </form>
+            <div class="pop-input">
+                <label><input type="text" placeholder="Name"></label>
+                <label><input type="text" placeholder="Surname"></label>
+                <label><input type="number" placeholder="Phone Number"></label>
+                <label><input type="email" placeholder="E-Mail"></label>
+                <label><input type="password" placeholder="Password"></label>
+                <label><input type="password" placeholder="Confirm Pass">  </label>
+            </div>
             
         </div>
         <script>
@@ -128,7 +128,7 @@
             var btn =document.getElementById("sign-up");
             var pop =document.getElementById("sing-pop-up");
             var exit =document.getElementById("pop-exit");
-            var body= document.getElementById('main-body');
+            var body= document.getElementById('body');
             btn.addEventListener('click', function(e){
                 pop.classList.toggle('toggle-pop');
                 body.classList.toggle('toggle-scroll');
