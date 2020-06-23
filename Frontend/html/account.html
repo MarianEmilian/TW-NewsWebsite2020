@@ -62,6 +62,7 @@
         </script>
     </header>
 
+   
     <div class="bg-modal togle-pop" id="sing-pop-up">
         <div class="pop-content">
 
@@ -79,7 +80,6 @@
                 <label><input type="password" placeholder="Confirm Pass">  </label>
             </div>
         </div>
-
         <script>
             // afisam/ascundem pop-up sign up
             var btn = document.getElementById("sign-up");
@@ -99,7 +99,25 @@
         </script>
     </div>
 
-    <div class="body-content-account">
+    <div class="login-modal hidden" id="login-modal">
+        <div class="login-content">
+
+            <img src="../Icons/x-circle.png" alt="close" class="login-exit" id="login-exit">
+
+            <label class="login-logo">Login</label>
+            
+            <button class="login-pop">Login</button>
+            <div class="login-input">
+                <label>Email:<br>
+                <input type="email" placeholder="E-Mail"></label>
+                <label>Password:<br>
+                <input type="password" placeholder="Password"></label>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="body-content-account hidden">
         <div class="body-left">
             <img src="../Icons/profile.png" alt="Profile">
             <div class="data">
@@ -202,7 +220,7 @@
                         <p>
                             * You have to press the comma to add more tags. *
                         </p>
-                        <script src="../javascript/account.js"></script>
+                        
                     </div>
                 </div>
             </div>
@@ -244,7 +262,7 @@
         </div>
     </footer>
 
-   
+    <script src="../javascript/account.js"></script>
 </body>
 
 

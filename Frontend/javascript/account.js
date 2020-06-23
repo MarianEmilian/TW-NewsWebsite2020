@@ -115,3 +115,22 @@ function showpwconf() {
         pw.innerHTML='Hide';
       }  
 }
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    var login=document.getElementById('login-modal');
+    // fetch('is_authenticated')
+    // .then(res => res.json())
+    // .then(json =>{
+    //     if(json.success=='false'){
+    //         login.classList.toggle('hidden');
+    //     }
+    // })
+    let exit=document.getElementById('login-exit');
+    var login=document.getElementById('login-modal');
+    exit.addEventListener('click',function(e){
+        login.classList.toggle('hidden');
+    })
+
+
+})
