@@ -56,14 +56,14 @@ function getImgFeed(){
                 var ratio= height/width;
                 if(ratio>1){//photo is portrait
                     height=400;
-                    width=0.75*height;
+                    width=ratio*300;
                 }
                 else{//photo is landscape
                     height=300;
                     width=1.5*height;
                 }
 
-                img.setAttribute("src",photo.urls.regular);
+                img.setAttribute("src",photo.urls.small);
                 img.setAttribute("height",height);
                 img.setAttribute("width",width);
                 img.setAttribute("alt",photo.description);
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 width=1080
             }
             img.setAttribute("id","random-image");
-            img.setAttribute("src", data.urls.regular);
+            img.setAttribute("src", data.urls.small);
             img.setAttribute("height",height);
             img.setAttribute("width",width);
             img.setAttribute("alt",data.description);
