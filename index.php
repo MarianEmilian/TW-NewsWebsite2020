@@ -1,1 +1,1 @@
-<?php header( 'Location: /front/html/news.html' ) ;  ?>
+<?php header( 'Location: ' ) ;  ?>
