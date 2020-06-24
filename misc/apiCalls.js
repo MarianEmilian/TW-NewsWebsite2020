@@ -32,7 +32,7 @@ function getUnsplash(data,res){
     //preferencesUnsplash.domains.forEach(element => console.log(element));
 
     // preferences.domains.forEach(query => {
-        fetch(apiUnsplash/*+query*/,{method: 'get',headers: {'Authorization': 'Client-ID ' + process.env.AUTH_UNSPLASH}
+        fetch(apiUnsplash/*+query*/,{method: 'get',headers: {'Authorization': 'Client-ID ' + 'zkqvsaRJRltdxF2ezrCsGuqFsDdmpmOmys-ajLL6bk0'}
         }).catch(error => console.log('Error api unsplash'+error))
             .then(response => {
             if(response.ok){
@@ -78,7 +78,7 @@ function getUnsplash(data,res){
 }
 
 function getCurrents(data,res){
-    fetch(apiCurrents,{method: 'get', headers: {'Authorization': process.env.AUTH_CURRENTS},
+    fetch(apiCurrents,{method: 'get', headers: {'Authorization': 'ILbbk2g0gV68a7qxNBxLlEESOKLtJzD_wezTPwPq3D4Vefj4'},
     }).catch(function(error){
         console.log('Error api currents'+error);
     }).then(function(res){
@@ -171,7 +171,7 @@ function getCurrentsSearch(data,res){
     })
 }
 function getYoutube(data,res) { // videos
-    fetch(apiYoutube + process.env.AUTH_YOUTUBE, {method: 'get', })
+    fetch(apiYoutube + 'AIzaSyAmE_y7RC0SW9Daeg5Sz1WQa_p7wQ8K2hE', {method: 'get', })
         .catch(err => console.log('ERROR_API_YOUTUBE:' + err))
         .then(response => {
             if (response.ok) {
@@ -221,7 +221,7 @@ function getYoutube(data,res) { // videos
 function getCore(data,res) { // documents
     let page = Math.floor(Math.random() * 100) + 1;
 
-    fetch(apiCore + process.env.AUTH_CORE, {
+    fetch(apiCore + '4Xvx5WnSwlyT0e9NsoQkHFILbc2zO1jg', {
         method: 'get',
     })
         .catch(err => console.log('ERROR_API_CORE:' + err))
