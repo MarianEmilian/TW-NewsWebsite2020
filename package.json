@@ -1,17 +1,24 @@
 {
-  "name": "yes",
+  "name": "rer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "@types/unsplash-js": "^6.0.1",
-    "node-fetch": "^2.6.0",
-    "unsplash-js": "^6.0.0"
-  },
-  "devDependencies": {},
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.19",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "rss": "^1.2.2",
+    "web-push": "^3.4.4",
+    "xml-formatter": "^2.1.0",
+    "xss": "^1.0.7"
+  }
 }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>ReR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The images page for YouRSS website.">
+    <link rel="stylesheet" href="../assets/stylesheet.css">
+   
+    <link rel="icon" type="image/png" href="../assets/favicon.ico">
+
+</head>
+
+<body class="toggle-scroll body" id="body">
+    <header>
+        <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%" onclick="location.reload()">YouRSS</text>
+            </symbol>
+        
+            <g class = "g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+
+        <nav class="nav-bar toggle-nav" id="nav">
+            <ul class="nav-objs">
+                <li><a href="news" onclick="location.reload()">News</a></li>
+                <li><a href="images" onclick="location.reload()" >Images</a></li>
+                <li><a href="videos" onclick="location.reload()">Videos</a></li>
+                <li><a href="documents" onclick="location.reload()">Documents</a></li>
+                <li><a href="account" onclick="location.reload()">Account</a></li>
+            </ul>
+        </nav>
+        <button id="sign-up">Sign Up</button>
+        
+        <div class="search-container toggle-search" id="search">
+            <input type="text" placeholder="Search.." id="search-input">
+            <label for="search-input" class="label-hidden">Search</label>            <div class="search"></div>
+        </div>
+            <img src="../assets/menu.png" alt="toggle menu" class="menu toggle-menu" id="menu">
+            <script>
+                /*afisam/ascundem meniul hamburger*/
+                var menu = document.getElementById("menu");
+                var nav = document.getElementById("nav");
+                var search = document.getElementById("search");
+                menu.addEventListener('click', function(e) {
+                    nav.classList.toggle('toggle-mobile');
+                    search.classList.toggle('toggle-search');
+                    e.preventDefault();
+                });
+            </script>
+
+
+        
+    </header>
+    <a href="https://unsplash.com/developers" target='_blank' rel="noreferrer" class="credits">Loading Images using Unsplashed Api</a>
+    
+
+    <div class="body-content" id="main-body">
+        
+         
+
+    </div>
+
+    <form action="https://www.patreon.com/youRSS">
+        <button type="submit" class="donate">DonatePls</button>
+    </form>
+    
+    <footer>
+        <div class="footer-content">
+
+            <div class="left box">
+                <h2> About us</h2>
+                <div class="content">
+                    <p>Tehnologii Web, 2020 </p>
+
+                    <div class="social">
+                        <a href="https://youtu.be/nX2M7nzXWqA?t=83" rel="noreferrer" >Youtube</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="right box">
+                <h2> Contact details</h2>
+                <div class="content">
+                    <div class="phone">
+                        <span class="text">+40-766871760</span>
+                    </div>
+                    <div class="email">
+                        <span class="text">youRSS420@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="bg-modal togle-pop" id="sing-pop-up">
+        <div class="pop-content">
+            
+            <img src="../assets/x-circle.png" alt="close" class="pop-exit" id="pop-exit">
+
+            <label class="pop-logo">Join Us</label>
+            
+            
+            <form action="register" class="pop-input" method="POST">
+                <label><input type="text" name="name" placeholder="Name" id="name"></label>
+                <label><input type="text" name="surname" placeholder="Surname" id="surname"></label>
+                <label><input type="number" name="phoneNumber" placeholder="Phone Number" id="phoneNumber"></label>
+                <label><input type="email" name="email" placeholder="E-Mail" id="email"></label>
+                <label><input type="password" name="password" placeholder="Password" id="password"></label>
+                <label><input type="password" name="confirmPassword" placeholder="Confirm Pass" id="confirmPassword"></label>
+                <label><input class="check-pop" id="check-pop" type="submit" value="Sign Up"></label>
+            </form>
+        </div>
+        <script>
+            // afisam/ascundem pop-up sign up
+            var btn =document.getElementById("sign-up");
+            var pop =document.getElementById("sing-pop-up");
+            var exit =document.getElementById("pop-exit");
+            var body= document.getElementById('main-body');
+            //var signUp= document.getElementById('check-pop');
+            btn.addEventListener('click', function(e){
+                pop.classList.toggle('toggle-pop');
+                body.classList.toggle('toggle-scroll');
+                e.preventDefault();
+            });
+            pop-exit.addEventListener('click',function(e){
+                pop.classList.toggle('toggle-pop');
+                body.classList.toggle('toggle-scroll');
+                e.preventDefault();
+            });
+            // signUp.addEventListener('click',function(e){
+            //     var name= document.getElementById("name");
+            //     var surname= document.getElementById("surname");
+            //     var phoneNumber= document.getElementById("phoneNumber");
+            //     var email= document.getElementById("email");
+            //     var password= document.getElementById("password");
+            //     var confirmPassword= document.getElementById("confirmPassword");
+
+            //     var nameq= name.value;
+            //     var surnameq= surname.value;
+            //     var phoneNumberq= phoneNumber.value;
+            //     var emailq= email.value;
+            //     var passwordq= password.value;
+            //     var confirmPasswordq= confirmPassword.value;
+            
+            //     var text = '{"name":'+nameq+','+
+            //     '"surname":'+surnameq+','
+            //     +'"phoneNumber":'+phoneNumberq+','
+            //     +'"email":'+emailq+','
+            //     +'"password":'+passwordq+','
+            //     +'"confirmPassword":'+confirmPasswordq+'}';
+
+            //     var myJson = JSON.stringify(text);
+            //     var jsons = JSON.parse(myJson);
+            //     // fetch('/is_authenticated')
+            //     // .then(res => res.json())
+            //     // .then(json => console.log(json));
+
+            // });
+        </script>
+    </div>
+
+    <script src="../assets/scriptImgFeed.js" type="module"></script>
+
+</body>
+
+
+
+</html>

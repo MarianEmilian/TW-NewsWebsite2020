@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>ReR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The account settings page for YouRSS website.">
+    <link rel="stylesheet" href="../assets/stylesheet.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.ico">
+  
+</head>
+
+
+
+<body class="toggle-scroll body" id="body">
+    <header>
+        <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%" onclick="location.reload()">YouRSS</text>
+            </symbol>
+        
+            <g class = "g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+
+        <nav class="nav-bar toggle-nav" id="nav">
+            <ul class="nav-objs">
+                <li><a href="news" onclick="location.reload()">News</a></li>
+                <li><a href="images" onclick="location.reload()">Images</a></li>
+                <li><a href="videos" onclick="location.reload()">Videos</a></li>
+                <li><a href="documents" onclick="location.reload()">Documents</a></li>
+                <li><a href="account" onclick="location.reload()">Account</a></li>
+            </ul>
+        </nav>
+
+        <button id="sign-up">Sign Up</button>
+
+        <div class="search-container toggle-search" id="search">
+                <input type="text" placeholder="Search.." id="search-input">
+                <label for="search-input" class="label-hidden">Search</label>
+            <div class="search"></div>
+        </div>
+
+        <img src="../assets/menu.png" alt="toggle menu" class="menu toggle-menu" id="menu">
+        <script>
+            /*afisam/ascundem meniul hamburger*/
+            var menu = document.getElementById("menu");
+            var nav = document.getElementById("nav");
+            var search = document.getElementById("search");
+            menu.addEventListener('click', function(e) {
+                nav.classList.toggle('toggle-mobile');
+                search.classList.toggle('toggle-search');
+                e.preventDefault();
+            });
+        </script>
+    </header>
+
+   
+    <div class="bg-modal togle-pop" id="sing-pop-up">
+        <div class="pop-content">
+            
+            <img src="../assets/x-circle.png" alt="close" class="pop-exit" id="pop-exit">
+
+            <label class="pop-logo">Join Us</label>
+            
+            
+            <form action="register" class="pop-input" method="POST">
+                <label><input type="text" name="name" placeholder="Name" id="name"></label>
+                <label><input type="text" name="surname" placeholder="Surname" id="surname"></label>
+                <label><input type="number" name="phoneNumber" placeholder="Phone Number" id="phoneNumber"></label>
+                <label><input type="email" name="email" placeholder="E-Mail" id="email"></label>
+                <label><input type="password" name="password" placeholder="Password" id="password"></label>
+                <label><input type="password" name="confirmPassword" placeholder="Confirm Pass" id="confirmPassword"></label>
+                <label><input class="check-pop" id="check-pop" type="submit" value="Sign Up"></label>
+            </form>
+        </div>
+        <script>
+            // afisam/ascundem pop-up sign up
+            var btn =document.getElementById("sign-up");
+            var pop =document.getElementById("sing-pop-up");
+            var exit =document.getElementById("pop-exit");
+            var body= document.getElementById('main-body');
+            //var signUp= document.getElementById('check-pop');
+            btn.addEventListener('click', function(e){
+                pop.classList.toggle('toggle-pop');
+                body.classList.toggle('toggle-scroll');
+                e.preventDefault();
+            });
+            pop-exit.addEventListener('click',function(e){
+                pop.classList.toggle('toggle-pop');
+                body.classList.toggle('toggle-scroll');
+                e.preventDefault();
+            });
+            // signUp.addEventListener('click',function(e){
+            //     var name= document.getElementById("name");
+            //     var surname= document.getElementById("surname");
+            //     var phoneNumber= document.getElementById("phoneNumber");
+            //     var email= document.getElementById("email");
+            //     var password= document.getElementById("password");
+            //     var confirmPassword= document.getElementById("confirmPassword");
+
+            //     var nameq= name.value;
+            //     var surnameq= surname.value;
+            //     var phoneNumberq= phoneNumber.value;
+            //     var emailq= email.value;
+            //     var passwordq= password.value;
+            //     var confirmPasswordq= confirmPassword.value;
+            
+            //     var text = '{"name":'+nameq+','+
+            //     '"surname":'+surnameq+','
+            //     +'"phoneNumber":'+phoneNumberq+','
+            //     +'"email":'+emailq+','
+            //     +'"password":'+passwordq+','
+            //     +'"confirmPassword":'+confirmPasswordq+'}';
+
+            //     var myJson = JSON.stringify(text);
+            //     var jsons = JSON.parse(myJson);
+            //     // fetch('/is_authenticated')
+            //     // .then(res => res.json())
+            //     // .then(json => console.log(json));
+
+            // });
+        </script>
+    </div>
+
+    <div class="login-modal hidden" id="login-modal">
+        <div class="login-content">
+
+            <img src="../assets/x-circle.png" alt="close" class="login-exit" id="login-exit">
+
+            <label class="login-logo">Login</label>
+            
+            <button class="login-pop">Login</button>
+            <div class="login-input">
+                <label>Email:<br>
+                <input type="email" placeholder="E-Mail"></label>
+                <label>Password:<br>
+                <input type="password" placeholder="Password"></label>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="body-content-account hidden">
+        <div class="body-left">
+            <img src="../assets/profile.png" alt="Profile">
+            <div class="data">
+                <div class="titlu-left"> Account Settings </div>
+            </div>
+
+            <div class="data">
+                <div class="data-settings">
+
+                    <a href="#modal" class="modal-trigger">Edit</a>
+
+                    <div></div>
+                    <div class="modal" id="modal">
+                        <div class="modal__dialog">
+                            <div class="modal__content">
+
+                                <header class="modal__header">
+                                    <div class="modal__title">
+                                        <div class="modal__titlee">Edit Account</div>
+
+                                    </div>
+                                    <a href="#" class="modal__close">&times;</a>
+                                </header>
+
+                                <div class="modal__body">
+
+                                    <div class="modal__body__left">
+                                        <p>PERSONAL INFO</p>
+                                        <label for="fname">First Name:</label><br>
+                                        <input type="text" id="fname" name="fname"><br>
+                                        <label for="lname">Last Name:</label><br>
+                                        <input type="text" id="lname" name="lname"><br>
+                                        <label for="email">E-Mail:</label><br>
+                                        <input type="text" id="email" name="email"><br>
+                                        <label for="phone">Phone:</label><br>
+                                        <input type="number" id="phone" name="phone"><br>
+                                    </div>
+
+                                    <div class="modal__body__right">
+                                        <p>SECURITY INFO</p>
+                                        <label for="showpw">Old Password:</label><br>
+                                        <input type="password" id="showpw"><button onclick="showpw();" class="button-showpw">Show</button><br>
+                                        <label for="showpwnew">New Password:</label><br>
+                                        <input type="password" id="showpwnew"><button onclick="showpwnew();" class="button-showpw">Show</button><br>
+                                        <label for="showpwconf">Confirm New Password:</label><br>
+                                        <input type="password" id="showpwconf"><button onclick="showpwconf();" class="button-showpw">Show</button><br>
+                                    </div>
+                                </div>
+
+                                <div class="button__save">
+                                    <a href="" class="modal-trigger-save">Save</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-right">
+            <div class="info">
+                <div class="titlu-right">Account Details</div>
+                <div class="info-data">
+                    <div class="data">
+                        <div class="subtitle-right">Name:</div>
+                        <p>Sarah</p>
+                    </div>
+                    <div class="data">
+                        <div class="subtitle-right">Surname:</div>
+                        <p>Cooper</p>
+                    </div>
+                </div>
+                <div class="info-data">
+                    <div class="data">
+                        <div class="subtitle-right">E-Mail:</div>
+                        <p>sarah.cooper@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-data">
+                    <div class="data">
+                        <div class="subtitle-right">Phone:</div>
+                        <p>0001-213-998761</p>
+                    </div>
+                </div>
+            </div>
+            <div class="preferences">
+                <div class="titlu-right">Your Preferences</div>
+                <div class="info-data">
+                    <div class="data">
+                        <p>
+                            Enter some tags:
+                        </p>
+
+                        <div class="tags-input-account" data-name="tags-input-account">
+                            
+
+                        </div>
+
+                        <p>
+                            * You have to press the comma to add more tags. *
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form action="https://www.patreon.com/youRSS">
+
+            <button type="submit" class="donate">DonatePls</button>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="left box">
+                <h2> About us</h2>
+                <div class="content">
+                    <p>Tehnologii Web, 2020 </p>
+                    <div class="social">
+                        <a href="https://youtu.be/nX2M7nzXWqA?t=83" rel="noreferrer" >Youtube</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="right box">
+                <h2> Contact details</h2>
+                <div class="content">
+                    <div class="phone">
+                        <span class="text">+40-766871760</span>
+                    </div>
+                    <div class="email">
+                        <span class="text">youRSS420@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../assets/account.js"></script>
+</body>
+
+
+
+</html>
