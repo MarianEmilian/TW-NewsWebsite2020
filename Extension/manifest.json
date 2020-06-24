@@ -1,0 +1,10 @@
+{
+    "name": "YouRSS",
+    "version": "0.3",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup":"popup.html",
+      "default_title": "YouRSS"
+    },
+    "permissions": ["tabs"]
+}

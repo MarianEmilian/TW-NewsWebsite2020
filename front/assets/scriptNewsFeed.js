@@ -71,8 +71,6 @@ function createNews(cardData){
     let link= cardData.url;
     let description = cardData.description;
 
-    console.log(src + " " + titles + " " + link + " " + description);
-
     let newsCard=document.createElement('div');
     newsCard.classList.add('card');
 
